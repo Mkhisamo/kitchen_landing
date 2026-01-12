@@ -461,7 +461,7 @@ const clientSlides = [
         </div>
 
         <button className="w-full mt-8 bg-[#252222] text-white px-8 py-3 rounded-lg uppercase text-[15px] font-medium hover:bg-[#1a1818] transition-colors">
-          Получить варианты расчета
+          Получить консультацию
         </button>
       </section>
 
