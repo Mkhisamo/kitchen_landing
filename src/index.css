@@ -1651,3 +1651,22 @@ html {
   inherits: false;
   initial-value: 1;
 }
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.page-bg {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.mobile-shell {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #fff;
+  overflow-x: hidden;
+}
