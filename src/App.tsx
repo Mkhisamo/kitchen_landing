@@ -656,31 +656,6 @@ const clientSlides = [
               цену.
             </p>
           </div>
-
-          {/* Гарантия */}
-          <div className="bg-white py-6">
-            <div className="flex items-start gap-4 mb-4">
-              <img
-                src={imgImage29}
-                alt="Гарантия"
-                className="w-16 h-16 object-contain"
-              />
-              <p className="text-[#228ece] text-[18px] font-bold leading-tight pt-2">
-                2 года гарантии
-              </p>
-            </div>
-            <p className="text-[14px] text-black leading-relaxed">
-              Благодаря стратегическому расположению доставка в
-              205 городов занимает минимум времени. Три
-              распределительных центра класса А (28 000 м²)
-              расположены стратегически.
-              <br />
-              <br />
-              Система автоматизирована: оформили заказ — он уже
-              на складе. Быстро, аккуратно, без лишних
-              переговоров.
-            </p>
-          </div>
         </div>
       </section>
 
