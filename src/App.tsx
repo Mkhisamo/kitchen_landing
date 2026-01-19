@@ -22,6 +22,7 @@ import imgImage5 from "figma:asset/b8072642a1a13c5d344d712bcff176c3dd2359c3.png"
 import imgImage423 from "figma:asset/24d6539802b28b85f975b08be57a077c78c13ceb.png";
 import imgImage424 from "figma:asset/b0e511f5bc12bf6de62d07206e6ac6e4c567e6e9.png";
 import { PaymentMethods } from "./components/PaymentMethods";
+import { OrderBottomSheet } from "./components/OrderBottomSheet";
 
 
 // Новые изображения для кухни Лаорна (разные цвета фасадов)
@@ -31,6 +32,7 @@ import imgLaornaZelenyy from "figma:asset/16879e8486d48e0dce2cf08a59f72b94ec1415
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isOrderSheetOpen, setIsOrderSheetOpen] = useState(false);
 
   // Слайдер кухонь клиентов (2 слайда)
 const [clientSlide, setClientSlide] = useState(0);
@@ -169,7 +171,7 @@ const clientSlides = [
           alt="Современная кухня"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(102,102,102,0.47)] to-[rgba(0,0,0,0.47)]" />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[rgba(102,102,102,0.47)] to-[rgba(0,0,0,0.47)]" />
 
         {/* ВАЖНО: вместо justify-center делаем 2 зоны: текст сверху + CTA снизу */}
         <div className="relative h-full px-6 text-center text-white flex flex-col">
@@ -200,13 +202,16 @@ const clientSlides = [
           </div>
 
           {/* Кнопка (1) — опускаем ниже через mt-auto, и (2) — уменьшаем отступ до текста */}
-          <div className="mt-auto pb-20 flex flex-col items-center">
-            <button className="w-full max-w-[288px] bg-white text-black px-8 py-3 rounded-lg uppercase text-[15px] font-medium hover:bg-gray-100 transition-colors">
-              Получить дизайн кухни
+          <div className="relative z-10 mt-auto pb-20 flex flex-col items-center">
+            <button
+              onClick={() => { console.log("CLICK"); setIsOrderSheetOpen(true); }}
+              className="relative z-10 w-full max-w-[288px] bg-white text-black px-8 py-3 rounded-lg uppercase text-[15px] font-medium hover:bg-gray-100 transition-colors"
+            >
+              Получить проект кухни
             </button>
 
             <p className="text-[12px] mt-2 opacity-90">
-              и готовую кухню у вас дома через 15 дней 
+              2-3 варианта под вашу планировку
             </p>
           </div>
         </div>
@@ -284,7 +289,10 @@ const clientSlides = [
           смотреть еще
         </button>
 
-        <button className="w-full mt-4 bg-[#252222] text-white px-8 py-3 rounded-lg uppercase text-[15px] font-medium hover:bg-[#1a1818] transition-colors">
+        <button
+          onClick={() => setIsOrderSheetOpen(true)}
+          className="w-full mt-4 bg-[#252222] text-white px-8 py-3 rounded-lg uppercase text-[15px] font-medium hover:bg-[#1a1818] transition-colors"
+        >
           Хочу вариант под мой метраж
         </button>
       </section>
@@ -823,6 +831,12 @@ const clientSlides = [
           <p>Проектирование и производство кухонь на заказ</p>
         </div>
       </footer>
+
+<OrderBottomSheet
+  isOpen={isOrderSheetOpen}
+  onClose={() => setIsOrderSheetOpen(false)}
+/>
+
     </div>
   );
 }

@@ -5,7 +5,7 @@ export function PaymentMethods() {
     <section className="py-12 px-6 bg-white border-t border-[#c4c4c4]">
       <div className="mb-6">
         <h2 className="text-[32px] font-bold text-black mb-1 leading-[1.05]">
-          Выберите удобный способ оплаты
+          Выбирайте удобный способ оплаты
         </h2>
         <p className="text-[18px] text-[#505d68]">
           Мы сделали несколько вариантов — оплачивайте так, как комфортно именно вам.
