@@ -21,7 +21,7 @@ import imgImage29 from "figma:asset/d6fdb1b1d10a2f7373f3ae707f85e90836464903.png
 import imgImage5 from "figma:asset/b8072642a1a13c5d344d712bcff176c3dd2359c3.png";
 import imgImage423 from "figma:asset/24d6539802b28b85f975b08be57a077c78c13ceb.png";
 import imgImage424 from "figma:asset/b0e511f5bc12bf6de62d07206e6ac6e4c567e6e9.png";
-
+import { PaymentMethods } from "./components/PaymentMethods";
 
 
 // Новые изображения для кухни Лаорна (разные цвета фасадов)
@@ -177,7 +177,7 @@ const clientSlides = [
           <div className="pt-40">
             <div className="flex flex-col items-center gap-1">
               <h1 className="text-[28px] font-bold uppercase tracking-wide leading-tight">
-                Спроектируем
+                СДЕЛАЕМ
               </h1>
 
               <h2 className="text-[64px] font-bold uppercase leading-[0.9]">
@@ -189,19 +189,24 @@ const clientSlides = [
               </h3>
 
               <p className="text-[16px] leading-tight opacity-95">
-                под вашу планировку и бджет
+                под вашу планировку и бюджет
               </p>
+
+              <h2 className="text-[58px] font-bold uppercase leading-[0.9]">
+                за 15 дней
+              </h2>
+
             </div>
           </div>
 
           {/* Кнопка (1) — опускаем ниже через mt-auto, и (2) — уменьшаем отступ до текста */}
           <div className="mt-auto pb-20 flex flex-col items-center">
             <button className="w-full max-w-[288px] bg-white text-black px-8 py-3 rounded-lg uppercase text-[15px] font-medium hover:bg-gray-100 transition-colors">
-              Получить проект кухни
+              Получить дизайн кухни
             </button>
 
             <p className="text-[12px] mt-2 opacity-90">
-              2-3 варианта под вашу планировку
+              и готовую кухню у вас дома через 15 дней 
             </p>
           </div>
         </div>
@@ -287,7 +292,7 @@ const clientSlides = [
 
       {/* Социальные гарантии */}
       <SocialGuarantees />
-      
+
       {/* Продумываем кухню */}
 <section className="py-12 px-6 bg-white border-t border-[#c4c4c4]">
   <div className="mb-6">
@@ -379,7 +384,9 @@ const clientSlides = [
         </button>
       </section>
       
-
+      {/* Способы оплаты */}
+      <PaymentMethods />
+      
    {/* Как заказать */}
       <section className="py-12 px-6 bg-white border-t border-[#c4c4c4]">
         <div className="mb-8">
@@ -392,7 +399,7 @@ const clientSlides = [
 
 <div className="mb-2">
           <h2 className="text-[32px] font-bold text-black mb-1 leading-[1.05]">
-             Как заказать кухню в 3 ШАГА
+             Закажите кухню в 3 ШАГА
           </h2>
           <p className="text-[18px] text-black">
             Начать можно с фото - мы подготовим врианты и
@@ -415,10 +422,10 @@ const clientSlides = [
             </div>
             <div className="flex-1 pt-1">
               <h3 className="text-[24px] font-bold text-black mb-2">
-                Вы присылаете размеры
+                Пришлите размеры
               </h3>
               <p className="text-[14px] text-black">
-                Планировка, метраж, фото - достаточно чтобы
+                Планировка, метраж или фото - достаточно чтобы
                 сделать первый вариант проекта
               </p>
             </div>
@@ -433,7 +440,7 @@ const clientSlides = [
             </div>
             <div className="flex-1 pt-1">
               <h3 className="text-[24px] font-bold text-black mb-2">
-                Мы готовим 2-3 решения
+                Дизайнер сдделает проект 
               </h3>
               <p className="text-[14px] text-black">
                 Вы сравниваете и выбираете подходящий вариант
@@ -451,10 +458,10 @@ const clientSlides = [
             </div>
             <div className="flex-1 pt-1">
               <h3 className="text-[24px] font-bold text-black mb-2">
-                Вы утверждаете смету
+                Мы привезем вам готовую кухню
               </h3>
               <p className="text-[14px] text-black">
-                Мы начинаем производство
+                В согласованные с вами сроки
               </p>
             </div>
           </div>
