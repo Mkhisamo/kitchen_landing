@@ -7,30 +7,49 @@ interface GuaranteeCard {
   image: string;
 }
 
+import img1 from '../assets/1_white.jpg';
+import img2 from '../assets/2_white.jpg';
+import img3 from '../assets/3_white.jpg';
+import img4 from '../assets/4_white.jpg';
+import img5 from '../assets/5_white.jpg';
+import img6 from '../assets/6_white.jpg';
+
 const guarantees: GuaranteeCard[] = [
   {
     id: 1,
     title: 'Кухня за 15 дней',
     subtitle: 'От замера до полной установки всего 15 дней. Срок фиксируем в договоре',
-    image: 'https://images.unsplash.com/photo-1610177534644-34d881503b83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBraXRjaGVuJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzY3ODM5ODYxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: img1,
   },
   {
     id: 2,
     title: '1.5 года гарантии',
     subtitle: 'По договору на кухню. Качество, на которое можно положиться',
-    image: 'https://images.unsplash.com/photo-1639405069836-f82aa6dcb900?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBraXRjaGVuJTIwZGVzaWdufGVufDF8fHx8MTc2Nzg4NzQyMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: img2,
   },
   {
     id: 3,
     title: '1000+ проектов',
     subtitle: 'Доверие тысяч клиентов. Мы знаем, как сделать вашу кухню идеальной',
-    image: 'https://images.unsplash.com/photo-1665507279458-b21dea52c447?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBraXRjaGVufGVufDF8fHx8MTc2NzkzMTE5OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: img3,
   },
   {
     id: 4,
     title: '500+ дизайнов кухонь',
     subtitle: 'Подбираем фасады и цвета — чтобы кухня выглядела “вашей”.',
-    image: 'https://images.unsplash.com/photo-1665507279458-b21dea52c447?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW1wb3JhcnklMjBraXRjaGVufGVufDF8fHx8MTc2NzkzMTE5OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: img4,
+  },
+  {
+    id: 5,
+    title: 'Индивидуальный подход',
+    subtitle: 'Учтём все ваши пожелания и бюджет',
+    image: img5,
+  },
+  {
+    id: 6,
+    title: 'Бесплатный замер',
+    subtitle: 'Выезжаем на объект, делаем точные замеры и 3D-проект',
+    image: img6,
   },
 ];
 
@@ -38,7 +57,7 @@ type SocialGuaranteesProps = {
   embedded?: boolean;
 };
 
-export function SocialGuarantees({ embedded = false }: SocialGuaranteesProps) {
+export function KitchenSlider({ embedded = false }: SocialGuaranteesProps) {
   return (
     <section className={embedded ? "bg-white" : "py-12 bg-white border-t border-[#c4c4c4]"}>
       <HorizontalSlider

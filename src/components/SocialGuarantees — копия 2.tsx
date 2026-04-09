@@ -11,7 +11,7 @@ const guarantees: GuaranteeCard[] = [
   {
     id: 1,
     title: 'Кухня за 15 дней',
-    subtitle: 'От замера до полной установки всего 15 дней. Срок фиксируем в договоре',
+    subtitle: ' От замера до полной установки всего 15 дней. Срок фиксируем в договоре',
     image: 'https://images.unsplash.com/photo-1610177534644-34d881503b83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBraXRjaGVuJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzY3ODM5ODYxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
   },
   {
@@ -34,18 +34,14 @@ const guarantees: GuaranteeCard[] = [
   },
 ];
 
-type SocialGuaranteesProps = {
-  embedded?: boolean;
-};
-
-export function SocialGuarantees({ embedded = false }: SocialGuaranteesProps) {
+export function SocialGuarantees() {
   return (
-    <section className={embedded ? "bg-white" : "py-12 bg-white border-t border-[#c4c4c4]"}>
+    <section className="py-12 bg-white border-t border-[#c4c4c4]">
       <HorizontalSlider
-        contentClassName={embedded ? "" : "px-2"}
-        dotsClassName={embedded ? "mt-2 mb-0" : "mt-6"}
+        items={guarantees}
+        contentClassName="px-6"
         renderItem={(guarantee) => (
-          <div className={`relative h-[240px] overflow-hidden ${embedded ? "" : "rounded-2xl"}`}>
+          <div className="relative h-[240px] rounded-2xl overflow-hidden">
             <img
               src={guarantee.image}
               alt={guarantee.title}
@@ -64,7 +60,6 @@ export function SocialGuarantees({ embedded = false }: SocialGuaranteesProps) {
             </div>
           </div>
         )}
-        items={guarantees}
       />
     </section>
   );

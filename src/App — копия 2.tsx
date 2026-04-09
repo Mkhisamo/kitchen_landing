@@ -2,8 +2,6 @@ import { useState } from "react";
 import svgPaths from "./imports/svg-d7lne801bq";
 import { KitchenColorSelector } from "./components/KitchenColorSelector";
 import { SocialGuarantees } from "./components/SocialGuarantees";
-import { KitchenSlider } from "./components/KitchenSlider"; 
-import { KitchenSliderBrown } from "./components/KitchenSliderBrown";
 import { SocialGuaranteesCards } from "./components/SocialGuaranteesCards";
 import imgImage445 from "figma:asset/dfeed84b53fe90ab806f4ba10cecc52b16be2904.png";
 import imgImage1 from "figma:asset/b1cc1be4db896dcf66b308053b2e38f7a0212fbd.png";
@@ -25,7 +23,6 @@ import imgImage423 from "figma:asset/24d6539802b28b85f975b08be57a077c78c13ceb.pn
 import imgImage424 from "figma:asset/b0e511f5bc12bf6de62d07206e6ac6e4c567e6e9.png";
 import { PaymentMethods } from "./components/PaymentMethods";
 import { OrderBottomSheet } from "./components/OrderBottomSheet";
-import heroImage from './assets/herowhite.jpg';
 
 
 // Новые изображения для кухни Лаорна (разные цвета фасадов)
@@ -170,7 +167,7 @@ const clientSlides = [
       {/* Hero Section */}
       <section className="relative h-[600px] overflow-hidden">
         <img
-          src={heroImage}
+          src={imgImage445}
           alt="Современная кухня"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -204,12 +201,11 @@ const clientSlides = [
             </div>
           </div>
 
-
           {/* Кнопка (1) — опускаем ниже через mt-auto, и (2) — уменьшаем отступ до текста */}
           <div className="relative z-10 mt-auto pb-20 flex flex-col items-center">
             <button
               onClick={() => { console.log("CLICK"); setIsOrderSheetOpen(true); }}
-            className="relative z-10 w-full max-w-[288px] bg-white text-black px-8 py-3 rounded-lg uppercase text-[15px] font-medium hover:bg-gray-100 transition-colors"
+              className="relative z-10 w-full max-w-[288px] bg-white text-black px-8 py-3 rounded-lg uppercase text-[15px] font-medium hover:bg-gray-100 transition-colors"
             >
               Получить проект кухни
             </button>
@@ -236,32 +232,41 @@ const clientSlides = [
         {/* Kitchen Cards */}
         <div className="space-y-6">
           {/* Card 1 */}
-<div className="bg-white border border-[#e5e5e5] rounded-lg overflow-hidden">
-  <KitchenSlider embedded />
-
-  <div className="p-4 pt-2">
-    <h3 className="text-[18px] font-bold text-black mb-1">
-      Бьёркхольм
-    </h3>
-    <p className="text-[14px] text-black mb-0.5">
-      S 12 м2 | ПРЯМАЯ | ш 220 см X 180 см
-    </p>
-  </div>
-</div>
+          <div className="bg-white border border-[#e5e5e5] rounded-lg overflow-hidden">
+            <div className="relative">
+              <img
+                src={imgImage1}
+                alt="Эккервуд"
+                className="w-full h-[240px] object-cover"
+              />
+            </div>
+                  <SocialGuarantees />
+            <div className="p-4">
+              <h3 className="text-[18px] font-bold text-black mb-1">
+                Эккервуд
+              </h3>
+              <p className="text-[14px] text-black mb-0.5">
+                S 12 м2 | ПРЯМАЯ | ш 220 см X 180 см
+              </p>
+            </div>
+          </div>
 
           {/* Card 2 */}
-<div className="bg-white border border-[#e5e5e5] rounded-lg overflow-hidden">
-  <KitchenSliderBrown embedded />
-
-  <div className="p-4 pt-2">
-    <h3 className="text-[18px] font-bold text-black mb-1">
-      Фьельбакка
-    </h3>
-    <p className="text-[14px] text-black mb-0.5">
-      S 12 м2 | ПРЯМАЯ | ш 220 см X 180 см
-    </p>
-  </div>
-</div>
+          <div className="bg-white border border-[#e5e5e5] rounded-lg overflow-hidden">
+            <img
+              src={imgImage2}
+              alt="Калеста"
+              className="w-full h-[240px] object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-[18px] font-bold text-black mb-1">
+                Калеста
+              </h3>
+              <p className="text-[14px] text-black mb-0.5">
+                S 12 м2 | ПРЯМАЯ | ш 200 см X 180 см
+              </p>
+            </div>
+          </div>
 
           {/* Card 3 */}
           <div className="bg-white border border-[#e5e5e5] rounded-lg overflow-hidden">
